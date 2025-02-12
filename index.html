@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quierés ser mi San Valentín Kamitron?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="title">¿Quieres ser mi San Valentín Kamitron?</h1>
+    <div class="envelope-container" onclick="openEnvelope()">
+        <div class="envelope">
+            <div class="top"></div>
+            <div class="letter">
+                <p class="explanation">Si dices que sí, lo que está detrás de las letras puede ser tuyo D:</p>
+            
+            </div>
+        </div>
+    </div>
+    <div class="corner-images">
+        <img src="img/yo.png" class="corner top-left" alt="Top Left">
+        <img src="img/yo.png" class="corner top-right" alt="Top Right">
+        <img src="img/yo.png" class="corner bottom-left" alt="Bottom Left">
+        <img src="img/yo.png" class="corner bottom-right" alt="Bottom Right">
+    </div>
+
+    <!-- Botones afuera de la carta, inicialmente ocultos -->
+    <div class="buttons-container hidden">
+        <button class="yes-button" onclick="handleYesClick()">Sí</button>
+        <button class="no-button" onclick="handleNoClick()">No</button>
+    </div>
+
+    <audio autoplay loop>
+        <source src="audio/Mac_DeMarco_My_Kind_of_Woman_(OFFICIAL_VIDEO)_[_YouConvert.net_].mp3" type="audio/mpeg">
+        <source src="audio/Mac_DeMarco_My_Kind_of_Woman_(OFFICIAL_VIDEO)_[_YouConvert.net_].ogg" type="audio/ogg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

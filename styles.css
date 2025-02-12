@@ -1,0 +1,172 @@
+/* Estilos generales */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('img/fondo.jpg'); /* Cambia la ruta si es necesario */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  /* Contenedor del sobre */
+  .envelope-container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px; /* Añadido para dar perspectiva a la animación */
+  }
+  
+  /* Sobre rojo */
+  .envelope {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: #d32f2f;
+    border-radius: 15px; /* Bordes más suaves */
+    box-shadow: 0 10px 20px rgba(240, 237, 237, 0.2); /* Sombras para darle un efecto de profundidad */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.8s ease-in-out;
+    overflow: hidden;
+  }
+  
+  /* Triángulo del sobre */
+  .envelope .top {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-top: 100px solid #b71c1c; /* Triángulo más estilizado */
+    transition: transform 0.8s ease-in-out;
+  }
+  
+  /* Carta dentro del sobre */
+  .letter {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background: rgba(248, 216, 34, 0.725);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.8s ease-in-out, opacity 0.5s ease-in-out;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    background-image: url('img/matcha.jpg'); /* Aquí puedes poner la imagen de fondo */
+    background-size: cover; /* Ajustar imagen para cubrir el espacio */
+    background-position: center; /* Centrar la imagen */
+    background-repeat: no-repeat; /* No repetir la imagen */
+  }
+  
+  /* Texto dentro de la carta */
+  .letter p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(233, 166, 166);
+  }
+  
+  /* Animaciones al abrir la carta */
+  .envelope.open .top {
+    transform: rotateX(180deg);
+  }
+  
+  .envelope.open .letter {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  /* Contenedor de los botones */
+  .buttons-container {
+    display: flex;
+    flex-direction: column; /* Los botones estarán en columna */
+    align-items: center; /* Centra los botones */
+    margin-top: 20px; /* Espaciado para que aparezcan debajo de la carta */
+    visibility: hidden; /* Inicialmente ocultos */
+  }
+  
+  /* Botón "Sí" */
+  .yes-button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    width: 150px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Espaciado entre los botones */
+    transition: font-size 0.3s ease-in-out;
+  }
+  
+  /* Botón "No" */
+  .no-button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    width: 150px;
+    background-color: #f44336;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Efecto al hacer crecer el botón "Sí" */
+  .yes-button.grow {
+    font-size: 2em;
+  }
+  
+  .corner-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none; /* Esto evita que las imágenes interfieran con los clics en otros elementos */
+  }
+  
+  .corner {
+    position: absolute;
+    width: 225px; /* Ajusta el tamaño de las imágenes según lo necesites */
+    height: 225px;
+    object-fit: cover;
+  }
+  
+  .top-left {
+    top: 0;
+    left: 0;
+  }
+  
+  .top-right {
+    top: 0;
+    right: 0;
+  }
+  
+  .bottom-left {
+    bottom: 0;
+    left: 0;
+  }
+  
+  .bottom-right {
+    bottom: 0;
+    right: 0;
+  }
+  
