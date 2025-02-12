@@ -145,8 +145,8 @@ body {
   
   .corner {
     position: absolute;
-    width: 225px; /* Ajusta el tamaño de las imágenes según lo necesites */
-    height: 225px;
+    width: 125px; /* Ajusta el tamaño de las imágenes según lo necesites */
+    height: 125px;
     object-fit: cover;
   }
   
